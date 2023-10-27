@@ -1,0 +1,41 @@
+#include "colors.inc"
+#include "textures.inc" 
+                                     //Метки #include "colors.inc" #include "textures.inc"
+                                     // должны открывать POVRAY-документ.
+                                     // Они подключают библиотеки цветов и текстур.
+
+ camera { location <0, 8, -25>       //Место, откуда вы смотрите на объекты 
+    look_at <-2, -2, 0>              //и направление.
+
+ }
+
+ light_source { <0, 20, -25> White } //Источник света. Его положение в пространстве и
+                                     // цвет, которым он освещает.
+
+ background{NeonBlue}                // Неоново-голубой цвет неба
+
+
+
+#declare projector = union {
+ box { <-1, -1, -1>,                //Нижний ближний левый угол 
+     < 1, 1, 1>               //Дальний верхний правый угол
+     texture {                  
+        pigment { 
+        image_map { "finkipp.jpg" 
+            map_type 0    
+            interpolate 2 
+            once
+          } 
+         } 
+     
+      finish { ambient 0.2 diffuse 0.8 }                          
+ }
+}
+}
+
+
+object {
+projector
+scale <17,17,0>
+translate <12,12,-63>
+}

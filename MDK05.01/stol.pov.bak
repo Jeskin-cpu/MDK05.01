@@ -1,0 +1,44 @@
+#include "colors.inc"
+
+#declare stol=union {   
+ box { <0, 0, 0>,                //Нижний ближний левый угол 
+     < 10, 1, 25>               //Дальний верхний правый угол       
+     texture {                  
+        pigment { color Red } //color White -закрасить в белый цвет 
+     }                          
+ } 
+
+   plane{ y,-10
+      pigment { checker White,Black scale 3 }
+  }   
+    
+   box { <0, 0, 0>,                //Нижний ближний левый угол 
+     < 1, -10, 1>               //Дальний верхний правый угол       
+     texture {                  
+        pigment { color Red } //color White -закрасить в белый цвет 
+     }   
+ }
+   
+box { <10, 0, 0>,                
+     < 9, -10, 1>               
+     texture {                  
+        pigment { color Green }
+     }   
+ }
+ 
+    box { <0, 0, 25>,                //Нижний ближний левый угол 
+     < 1, -10, 24>               //Дальний верхний правый угол       
+     texture {                  
+        pigment { color Pink } //color White -закрасить в белый цвет 
+     }   
+ }  
+ 
+     box { <10, 0, 25>,                //Нижний ближний левый угол 
+     < 9, -10, 24>               //Дальний верхний правый угол       
+     texture {                  
+        pigment { color Blue } //color White -закрасить в белый цвет 
+     }   
+ }
+
+}
+
